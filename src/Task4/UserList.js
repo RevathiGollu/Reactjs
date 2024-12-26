@@ -12,10 +12,10 @@ const UserList = () => {
                 }
                 const data = await response.json();
             
-        // Add a random 'isActive' property for demonstration
+        
         const updatedData = data.map(user => ({
           ...user,
-          isActive: Math.random() > 0.5 // Randomly assign active/inactive status
+          isActive: Math.random() > 0.5 
         }));
         setUsers(updatedData);
             }
