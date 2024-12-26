@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 
-// UserForm Component for fetching and posting data
+
 const UserForm = () => {
-  // State variables for form data, loading, and API responses
+  
   const [userData, setUserData] = useState({
     name: '',
     email: ''
@@ -11,7 +11,6 @@ const UserForm = () => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
-  // Fetching existing users from API
   useEffect(() => {
     const fetchUsers = async () => {
       try {
@@ -28,21 +27,21 @@ const UserForm = () => {
     fetchUsers();
   }, []);
 
-  // Handling form submission for posting new user data
+  
   const handleSubmit = async (e) => {
-    e.preventDefault();  // Prevent the form from reloading the page
+    e.preventDefault();  
     try {
       const response = await fetch('https://jsonplaceholder.typicode.com/users', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
         },
-        body: JSON.stringify(userData)  // Sending form data as JSON
+        body: JSON.stringify(userData)  
       });
 
       const newUser = await response.json();
-      setUsers([...users, newUser]);  // Adding the newly created user to the state
-      setUserData({ name: '', email: '' });  // Resetting the form after successful submission
+      setUsers([...users, newUser]);  
+      setUserData({ name: '', email: '' });  
     } catch (err) {
       setError(err);
     }
