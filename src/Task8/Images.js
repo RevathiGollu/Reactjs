@@ -19,7 +19,7 @@ function Images() {
     }
   };
 
-  // CSS-in-JS styles
+  
   const styles = {
     container: {
       textAlign: 'center',
