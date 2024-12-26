@@ -8,7 +8,7 @@ import UserList from './Task4/UserList';
 import DataFetcher from './Task6/DataFetcher';
 import UserForm from './Task7/UserForm';
 import Images from './Task8/Images';
-import Wrap from './Task5/Wrap';
+
 
 function App() {
   return (
@@ -43,10 +43,6 @@ function App() {
         <section>
         <h2>Task 8: Image</h2>
         <Images />
-        </section>
-        <section>
-        <h2>Task 5: </h2>
-        <Wrap />
         </section>
     </div>
 
