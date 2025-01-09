@@ -11,7 +11,7 @@ function UserLists() {
   ];
 
   const handleUserClick = (id, name) => {
-    // Navigating to /user/:id and passing state
+    
     navigate(`/user/${id}`, { state: { name } });
   };
 
