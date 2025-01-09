@@ -1,4 +1,4 @@
-// src/components/UploadImage.js
+
 import React, { useState } from 'react';
 import axios from 'axios';
 
@@ -7,12 +7,12 @@ const UploadImage = () => {
   const [url, setUrl] = useState(null);
   const [loading, setLoading] = useState(false);
 
-  // Handle the file change
+  
   const handleImageChange = (event) => {
     setImage(event.target.files[0]);
   };
 
-  // Handle image upload to Cloudinary
+  
   const handleImageUpload = async () => {
     if (!image) {
       alert('Please choose an image to upload');
@@ -23,12 +23,12 @@ const UploadImage = () => {
     
     const formData = new FormData();
     formData.append('file', image);
-    formData.append('upload_preset', 'ml_default'); // Replace with your Cloudinary preset
-    formData.append('cloud_name', 'dp6vzljt7'); // Replace with your Cloudinary cloud name
+    formData.append('upload_preset', 'ml_default'); 
+    formData.append('cloud_name', 'dp6vzljt7'); 
 
     try {
       const response = await axios.post('https://api.cloudinary.com/v1_1/dp6vzljt7/image/upload', formData);
-      setUrl(response.data.secure_url); // Get the optimized URL from Cloudinary response
+      setUrl(response.data.secure_url); 
       setLoading(false);
     } catch (error) {
       console.error('Error uploading image to Cloudinary:', error);
