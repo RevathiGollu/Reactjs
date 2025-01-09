@@ -2,8 +2,8 @@ import React from 'react';
 import { useParams, useLocation } from 'react-router-dom';
 
 function UserProfile() {
-  const { id } = useParams(); // Get dynamic ID parameter
-  const location = useLocation(); // Access passed state
+  const { id } = useParams(); 
+  const location = useLocation(); 
   const userName = location.state?.name || 'Unknown User';
 
   return (
