@@ -1,4 +1,4 @@
-// src/components/ErrorBoundary.js
+
 import React, { Component } from 'react';
 
 class ErrorBoundary extends Component {
@@ -7,19 +7,19 @@ class ErrorBoundary extends Component {
     this.state = { hasError: false, errorInfo: null };
   }
 
-  // This method is called when an error occurs in a child component
+  
   static getDerivedStateFromError(error) {
-    return { hasError: true }; // Update state to trigger fallback UI
+    return { hasError: true }; 
   }
 
-  // This lifecycle method is called to log error information
+
   componentDidCatch(error, errorInfo) {
     console.log("Error caught by ErrorBoundary:", error, errorInfo);
   }
 
   render() {
     if (this.state.hasError) {
-      // Fallback UI when an error occurs
+    
       return (
         <div>
           <h2>Oops! Something went wrong.</h2>
@@ -28,7 +28,7 @@ class ErrorBoundary extends Component {
       );
     }
 
-    // If no error, render the children components
+    
     return this.props.children; 
   }
 }
