@@ -1,7 +1,5 @@
-// src/components/ExpensiveComponent.js
-import React from 'react';
 
-// ExpensiveComponent is wrapped with React.memo() to avoid unnecessary re-renders.
+import React from 'react';
 const ExpensiveComponent = () => {
   console.log("ExpensiveComponent rendered!");
 
@@ -13,4 +11,4 @@ const ExpensiveComponent = () => {
   );
 };
 
-export default React.memo(ExpensiveComponent);  // Wrapping with React.memo()
+export default React.memo(ExpensiveComponent);  
