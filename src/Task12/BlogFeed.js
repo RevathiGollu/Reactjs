@@ -19,9 +19,9 @@ const BlogFeed = () => {
 
       const data = response.data;
 
-      // Check if there's more data to load
+    
       if (data.length < 10) {
-        setHasMore(false); // No more posts to load
+        setHasMore(false); 
       }
 
       setPosts((prevPosts) => [...prevPosts, ...data]);
@@ -33,12 +33,11 @@ const BlogFeed = () => {
     }
   };
 
-  // Load posts when component mounts or page changes
   useEffect(() => {
     fetchPosts();
   }, [page]);
 
-  // Handle scrolling to load more posts (infinite scroll)
+  
   const handleScroll = (event) => {
     const bottom = event.target.scrollHeight === event.target.scrollTop + event.target.clientHeight;
     if (bottom && hasMore && !loading) {
