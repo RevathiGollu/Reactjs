@@ -1,6 +1,6 @@
 // Dropdown.js
 import React from 'react';
-import useFetchOptions from './useFetchOptions'; // Importing the custom hook
+import useFetchOptions from './useFetchOptions'; 
 
 const Dropdown = ({ url }) => {
   const { options, loading, error } = useFetchOptions(url);
@@ -18,7 +18,7 @@ const Dropdown = ({ url }) => {
       <option value="">Select an option</option>
       {options.map((option) => (
         <option key={option.id} value={option.id}>
-          {option.title} {/* Assuming each option has an 'id' and 'name' */}
+          {option.title} 
         </option>
       ))}
     </select>
