@@ -11,7 +11,7 @@ const useFetchOptions = (url) => {
     const fetchData = async () => {
       try {
         const response = await axios.get(url);
-        setOptions(response.data);  // Assuming the API returns an array of options
+        setOptions(response.data);  
       } catch (err) {
         setError(err.message);
       } finally {
